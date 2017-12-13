@@ -1,13 +1,56 @@
 package org.fasttrackit;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+
+import java.util.Calendar;
+
+public class App {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.setName("Leo");
+        dog.setAge(2.5);
+        dog.setHealthCondition("healty");
+        dog.setBreed("beagle");
+
+        Cat cat = new Cat();
+        cat.setColor("black");
+        cat.setHight(20);
+        cat.setWeight(4);
+        cat.setRole("campionship");
+
+        Rescuer rescuer = new Rescuer();
+        rescuer.setName("Cristina");
+        rescuer.setHomeType("apartment");
+        rescuer.setMoney(600);
+
+        Vet vet = new Vet();
+        vet.setSpecialization("ClinicaAnimals");
+        vet.setLocator("Cluj");
+        vet.setDirections("center");
+        vet.setName("Paula");
+
+        ChipTrack chiptrack = new ChipTrack();
+        chiptrack.setActivitys("walking");
+        chiptrack.setPlaces("parks");
+
+        Planner planer = new Planner();
+        planer.setTodo("walk");
+        planer.setAppoiments("doctor");
+        planer.setEvents("birthday");
+
+        DogFood dogFood = new DogFood();
+        dogFood.setType("dry");
+        dogFood.setBrand("pedigree");
+        dogFood.setFlavor("chicken");
+        dogFood.setPackaging("bag");
+        dogFood.setPrice(100);
+        dogFood.setQuantity(9.5);
+
+        Training training = new Training();
+        training.setCommand("sit");
+        training.setSound("whistle");
+
+        rescuer.feed(dog, dogFood);
+        rescuer.entertain()
+
+
     }
-}
