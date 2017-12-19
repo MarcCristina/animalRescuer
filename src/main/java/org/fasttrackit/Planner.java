@@ -1,9 +1,12 @@
 package org.fasttrackit;
 
+import static java.lang.System.*;
+
 public class Planner {
     private String todo;
     private String appoiments;
     private String events;
+
 
     public String getTodo() {
         return todo;
@@ -27,5 +30,12 @@ public class Planner {
 
     public void setEvents(String events) {
         this.events = events;
+    }
+
+    public void celebrate(Animal animal, Dog dog) {
+        System.out.println(this.events + "just celebrated" + dog.getAge() + "age" + animal.getName());}
+
+    public void celebrate(Animal animal, Cat cat) {
+        System.out.println(this.events + "just celebrated" + cat.getAge() + "age" + animal.getName());
     }
 }

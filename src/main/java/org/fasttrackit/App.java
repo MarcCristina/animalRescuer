@@ -1,6 +1,7 @@
 package org.fasttrackit;
 
 
+import java.time.LocalDate;
 import java.util.Calendar;
 
 public class App {
@@ -45,12 +46,30 @@ public class App {
         dogFood.setPrice(100);
         dogFood.setQuantity(9.5);
 
+        CatFood catFood = new CatFood();
+        catFood.setName("Wiskas");
+        catFood.setFlaver("fish");
+
         Training training = new Training();
         training.setCommand("sit");
         training.setSound("whistle");
 
+        Calendar calendar = new Calendar();
+        calendar.setActivityName("training");
+        calendar.setDate(LocalDate.now());
+
+        EntertaimentActivity run = new EntertaimentActivity();
+        run.setName("running");
+
         rescuer.feed(dog, dogFood);
-        rescuer.entertain()
+        rescuer.entertain(dog, run);
+
+        rescuer.feed(cat, catFood);
+        rescuer.behavior(cat, run);
+
+        planer.celebrate(dog, dog);
+        planer.celebrate(cat, cat);
 
 
     }
+}

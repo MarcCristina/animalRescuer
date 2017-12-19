@@ -3,7 +3,6 @@ package org.fasttrackit;
 import java.time.LocalDate;
 
 public class Calendar extends Planner {
-
     private String activityName;
     private LocalDate date;
 
@@ -23,4 +22,3 @@ public class Calendar extends Planner {
         this.date = date;
     }
 }
-

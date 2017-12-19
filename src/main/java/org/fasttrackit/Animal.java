@@ -1,9 +1,18 @@
 package org.fasttrackit;
 
 public class Animal {
+    private String name;
     private String gender;
     private String favoriteFoodName;
     private String favoriteActivityName;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getGender() {
         return gender;
@@ -28,4 +37,5 @@ public class Animal {
     public void setFavoriteActivityName(String favoriteActivityName) {
         this.favoriteActivityName = favoriteActivityName;
     }
+
 }

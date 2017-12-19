@@ -17,6 +17,8 @@ public class Dog extends Animal {
 
     public double getAge() {
         return age;
+    }{
+
     }
 
     public void setAge(double age) {

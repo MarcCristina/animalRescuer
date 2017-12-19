@@ -5,6 +5,15 @@ public class Cat extends Animal {
     private String role;
     private double weight;
     private double hight;
+    private String age;
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
 
     public String getColor() {
         return color;
