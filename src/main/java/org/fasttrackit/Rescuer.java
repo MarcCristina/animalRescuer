@@ -42,12 +42,13 @@ public class Rescuer {
         System.out.println(this.name + "just gave some" + CatFood.getName() + "food to" + animal.getName());}
 
     public void behavior(Animal animal, EntertaimentActivity entertaimentActivity) {
-        System.out.println(this.name + "just did some" + entertaimentActivity.getName() + "hunt" + animal.getName());
+        System.out.println(this.name + "just did some" + entertaimentActivity.getName() + "hunt" + animal.getName());}
 
 
-    }
 
-}
+        }
+
+
 
 
 

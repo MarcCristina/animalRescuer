@@ -48,7 +48,7 @@ public class App {
 
         CatFood catFood = new CatFood();
         catFood.setName("Wiskas");
-        catFood.setFlaver("fish");
+        catFood.setFlavor("fish");
 
         Training training = new Training();
         training.setCommand("sit");
@@ -69,6 +69,11 @@ public class App {
 
         planer.celebrate(dog, dog);
         planer.celebrate(cat, cat);
+
+        catFood.payed(cat, catFood);
+        dogFood.payed(dog, dogFood);
+
+
 
 
     }
