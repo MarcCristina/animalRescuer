@@ -64,14 +64,4 @@ public class DogFood extends Food {
     public void setName(String name) {
         this.name = name;
     }
-
-    @Override
-    public double getMoney() {
-        return money;
     }
-
-    @Override
-    public void setMoney(double money) {
-        this.money = money;
-    }
-}

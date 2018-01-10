@@ -1,19 +1,27 @@
 package org.fasttrackit;
 
 public class Food {
-    public double money;
+    private double money;
 
-    public double getMoney() {
-        return money;
+
+    public String food;
+        public double price;
+
+    public String getFood() {
+        return food;
     }
 
-    public void setMoney(double money) {
-        this.money = money;}
-
-        public double payed (Animal animal, Food food){
-            System.out.println(double.class + "just payed some" + food.getMoney() + 5.1 + food.getMoney());
-            return 5.1;
-
+    public void setFood(String food) {
+        this.food = food;
     }
+
+    public double getPrice() {
+        return price;
     }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+}
+
 

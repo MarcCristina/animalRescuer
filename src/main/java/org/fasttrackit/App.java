@@ -54,9 +54,10 @@ public class App {
         training.setCommand("sit");
         training.setSound("whistle");
 
-        Calendar calendar = new Calendar();
+        org.fasttrackit.Calendar calendar = new org.fasttrackit.Calendar();
         calendar.setActivityName("training");
         calendar.setDate(LocalDate.now());
+
 
         EntertaimentActivity run = new EntertaimentActivity();
         run.setName("running");
@@ -69,12 +70,6 @@ public class App {
 
         planer.celebrate(dog, dog);
         planer.celebrate(cat, cat);
-
-        catFood.payed(cat, catFood);
-        dogFood.payed(dog, dogFood);
-
-
-
 
     }
 }
