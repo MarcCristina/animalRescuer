@@ -10,30 +10,42 @@ public class Game {
     private Vet vet;
     private List<Food> availableFood = new ArrayList<Food>();
     private EntertaimentActivity[] availableActivities = new EntertaimentActivity[10];
+    private void showavailableFood (){
+
+        System.out.println("availableFood");
+
+        for (Food food: availableFood){
+            System.out.println(food.getName());
+        }
+    }
 
     private void initFood() {
         Food food = new Food();
-        food.setFood("Akana");
+        food.setName("Akana");
 
         Food food1 = new Food();
         food.setFood("Royal");
 
-        for (int i = 0; i < availableFood(); i++) ;
-        {
+        availableFood.add(food);
+        availableFood.add(food);
 
-        }
-    }
-    private int availableFood() {
-        return 0;
     }
 
-    private void initActivities(); {
-        EntertaimentActivity acttivities = new EntertaimentActivity();
-        acttivities.setName("Run");
+    private void initActivities() {
+        EntertaimentActivity acttivity = new EntertaimentActivity();
+        acttivity.setName("Run");
 
-        EntertaimentActivity activity = new EntertaimentActivity();
-        activity.setName("hunting");
+        EntertaimentActivity activity1 = new EntertaimentActivity();
+        activity1.setName("hunting");
 
+        availableActivities[0]=acttivity;
+        availableActivities[1]=activity1;
+    }
+
+    public  void start(){
+        initFood();
+        initActivities();
+        showavailableFood();
 
     }
 
