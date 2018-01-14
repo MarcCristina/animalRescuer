@@ -3,8 +3,9 @@ package org.fasttrackit;
 public class Rescuer {
 
     private String name;
-    private double money ;
+    private double money;
     private String homeType;
+    private String foodType;
 
     public String getName() {
         return name;
@@ -40,25 +41,32 @@ public class Rescuer {
     }
 
     public void feed(Animal animal, CatFood catFood) {
-        System.out.println(this.name + "just gave some" + CatFood.getName() + "food to" + animal.getName());}
+        System.out.println(this.name + "just gave some" + catFood.getName() + "food to" + animal.getName());
+    }
 
     public void behavior(Animal animal, EntertaimentActivity entertaimentActivity) {
-        System.out.println(this.name + "just did some" + entertaimentActivity.getName() + "hunt" + animal.getName());}
+        System.out.println(this.name + "just did some" + entertaimentActivity.getName() + "hunt" + animal.getName());
+    }
 
-        public void pay (Food food){
-        this .money-=food.getPrice();
+    public void pay(Food food) {
+        this.money -= food.getPrice();
+
+    }
+
+    public void feed(Animal animal) {
+        animal.hungerLevel -= 1;
+    }
+
+    public void entertain(Animal animal){
+        animal.happinessLevel += 1;
 
 
-
-        }
-
-
-
-
+    public void feed (Animal animal){
+        animal.favoriteFoodName = animal.happinessLevel + 1;
+    }
+    }
 
 
-
-        }
 
 
 

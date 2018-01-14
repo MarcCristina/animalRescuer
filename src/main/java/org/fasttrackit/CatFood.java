@@ -6,7 +6,6 @@ public class CatFood extends Food {
     private static String Flavor;
 
     public String getName() {
-
         return name;
     }
 
@@ -19,7 +18,7 @@ public class CatFood extends Food {
         return Flavor;
     }
 
-    public static void setFlavor(String flavor) {
+    public void setFlavor(String flavor) {
         Flavor = Flavor;{
         }
     }}
