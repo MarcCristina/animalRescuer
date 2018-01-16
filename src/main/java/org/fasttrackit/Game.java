@@ -1,7 +1,9 @@
 package org.fasttrackit;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Scanner;
 
 public class Game {
     private Rescuer rescuer;
@@ -10,13 +12,47 @@ public class Game {
     private Vet vet;
     private List<Food> availableFood = new ArrayList<Food>();
     private EntertaimentActivity[] availableActivities = new EntertaimentActivity[10];
-    private void showavailableFood (){
+
+    private String initRescuer() {
+        System.out.println(" Enter your name");
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+        System.out.println("Your name is:" + name);
+        try {
+            name = scanner.nextLine();
+        } catch (InputMismatchException exception) {
+            System.out.println("Please enter valid name");
+            return initRescuer();
+        }
+        System.out.println("You entered name");
+        return name;
+
+    }
+
+    private void nameAnimal() {
+        System.out.println("Enter animal name");
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
+        System.out.println("Animal name is: " + name);
+        try {
+            name = scanner.nextLine();
+        } catch (InputMismatchException exception) {
+            System.out.println("Please enter valid name");
+
+        }
+    }
+
+    private void showavailableFood() {
 
         System.out.println("availableFood");
-
-        for (Food food: availableFood){
+        for (Food food : availableFood) {
             System.out.println(food.getName());
         }
+    }
+
+    public void initAnimal() {
+        Animal animal = new Animal();
+        animal.setName("Leo");
     }
 
     private void initFood() {
@@ -38,14 +74,41 @@ public class Game {
         EntertaimentActivity activity1 = new EntertaimentActivity();
         activity1.setName("hunting");
 
-        availableActivities[0]=acttivity;
-        availableActivities[1]=activity1;
+        availableActivities[0] = acttivity;
+        availableActivities[1] = activity1;
     }
 
-    public  void start(){
+    private void initrequireFeeding() {
+        System.out.println("Feed animal");
+        Scanner scanner = new Scanner(System.in);
+        String getfood = scanner.nextLine();
+        System.out.println("Your food is:" + getAvaibleFood());
+        {
+            try {
+                getfood = scanner.nextLine();
+            } catch (InputMismatchException exception) {
+                System.out.println("Please enter valid name");
+
+                for (Food food : availableFood) ;
+                if (availableFood != null) {
+                    System.out.println("You could chose other type of food");
+                }
+
+
+            }
+        }
+    }
+
+
+    public void start() {
         initFood();
         initActivities();
         showavailableFood();
+        initAnimal();
+        initAnimal();
+        initrequireFeeding();
+
+        }
 
     }
 

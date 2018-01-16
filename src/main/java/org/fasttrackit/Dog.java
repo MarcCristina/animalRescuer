@@ -1,19 +1,9 @@
 package org.fasttrackit;
 
 public class Dog extends Animal {
-
-    private String name;
     private double age;
     private String healthCondition;
     private String breed;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public double getAge() {
         return age;

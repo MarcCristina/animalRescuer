@@ -7,15 +7,6 @@ public class DogFood extends Food {
     private String brand;
     private String flavor;
     private String packaging;
-    private String name;
-
-    public double getPrice() {
-        return money;
-    }
-
-    public void setPrice(double price) {
-        this.money = price;
-    }
 
     public double getQuantity() {
         return quantity;
@@ -56,12 +47,5 @@ public class DogFood extends Food {
     public void setPackaging(String packaging) {
         this.packaging = packaging;
     }
+}
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-    }

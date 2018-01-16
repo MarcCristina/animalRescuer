@@ -31,21 +31,9 @@ public class Rescuer {
         this.homeType = homeType;
     }
 
-
-    public void feed(Animal animal, DogFood dogFood) {
-        System.out.println(this.name + "just gave some" + dogFood.getName() + "food to" + animal.getName());
-    }
-
     public void entertain(Animal animal, EntertaimentActivity entertaimentActivity) {
         System.out.println(this.name + "just did some" + entertaimentActivity.getName() + "with" + animal.getName());
-    }
 
-    public void feed(Animal animal, CatFood catFood) {
-        System.out.println(this.name + "just gave some" + catFood.getName() + "food to" + animal.getName());
-    }
-
-    public void behavior(Animal animal, EntertaimentActivity entertaimentActivity) {
-        System.out.println(this.name + "just did some" + entertaimentActivity.getName() + "hunt" + animal.getName());
     }
 
     public void pay(Food food) {
@@ -53,18 +41,14 @@ public class Rescuer {
 
     }
 
-    public void feed(Animal animal) {
-        animal.hungerLevel -= 1;
+    public void feed(Animal animal, Food food) {
+        System.out.println((this.name + "just gave some" + food.getName() + "food to" + animal.getName()));
+        animal.hungerLevel--;
+        if (animal.favoriteFoodName.equals(food.name)) {
+            animal.hapinessLevel++;
+        }
     }
-
-    public void entertain(Animal animal){
-        animal.happinessLevel += 1;
-
-
-    public void feed (Animal animal){
-        animal.favoriteFoodName = animal.happinessLevel + 1;
-    }
-    }
+}
 
 
 
