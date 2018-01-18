@@ -33,22 +33,26 @@ public class Rescuer {
 
     public void entertain(Animal animal, EntertaimentActivity entertaimentActivity) {
         System.out.println(this.name + "just did some" + entertaimentActivity.getName() + "with" + animal.getName());
+        animal.happinessLevel = 1;
+        if (animal.activity.equals(animal.favoriteActivityName)) {
+            animal.happinessLevel = 1;
+        }
 
     }
 
     public void pay(Food food) {
         this.money -= food.getPrice();
-
     }
+
 
     public void feed(Animal animal, Food food) {
         System.out.println((this.name + "just gave some" + food.getName() + "food to" + animal.getName()));
         animal.hungerLevel--;
-        if (animal.favoriteFoodName.equals(food.name)) {
-            animal.hapinessLevel++;
-        }
+        if (animal.favoriteFoodName.equals(food.name)) ;
+        animal.happinessLevel = 2;
     }
 }
+
 
 
 

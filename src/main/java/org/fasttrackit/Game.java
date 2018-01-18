@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class Game {
     private Rescuer rescuer;
     private Dog dog;
+    private Animal animal;
     private DogFood dogFood;
     private Vet vet;
     private List<Food> availableFood = new ArrayList<Food>();
@@ -108,9 +109,22 @@ public class Game {
         initAnimal();
         initrequireFeeding();
 
+    for (int i =0; i < 10; i++){
+        initrequireFeeding();
+        initActivities();
+        if (animal.happinessLevel <= 10){
+            System.out.println("Congratulation your pet is the happiest");
+            break;
         }
+        if (animal.hungerLevel <= 10);{
+            System.out.println("Congratulation your pet is not hungry");
+            break;
+        }
+    }
 
     }
+
+
 
     public List<Food> getAvaibleFood() {
         return availableFood;

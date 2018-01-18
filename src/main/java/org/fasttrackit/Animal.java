@@ -5,7 +5,8 @@ public class Animal {
     private String gender;
     public String favoriteFoodName;
     public String favoriteActivityName;
-    public String happinessLevel;
+    public int happinessLevel;
+    public String activity;
 
 
     public int hungerLevel;
@@ -36,14 +37,6 @@ public class Animal {
 
     public String getFavoriteActivityName() {
         return favoriteActivityName;
-    }
-
-    public String getHappinessLevel() {
-        return happinessLevel;
-    }
-
-    public void setHappinessLevel(String happinessLevel) {
-        this.happinessLevel = happinessLevel;
     }
 
     public int getHungerLevel() {
